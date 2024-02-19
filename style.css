@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family:'Nunito Sans', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: rgb(45, 44, 44);
+    color: white;
+}
+header{
+    padding: 20px 50px;
+    
+    width: 100%;
+    margin: 0 auto;
+}
+header h1{
+    font-size: 50px;
+    font-weight: 900;
+    color: rgb(155, 153, 153);
+    text-align: center;
+}
+#task-form{
+    display: flex;
+}
+input,button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#task-input{
+    flex: 1 1 0%;
+    background-color: white;
+    padding: 8px;
+    border-radius: 15px;
+    color: grey;
+    font-size: 18px;
+}
+#task-submit{
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, rgb(162, 8, 240), rgb(78, 9, 238));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.5s;
+}
+#task-submit:hover{
+    opacity: 0.8;
+}
+
+main{
+    flex: 1 1 0%;
+    
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+.list{
+    padding: 20px;
+}
+.list h2{
+    text-align: center;
+    font-size: 35px;
+    color: gainsboro;
+}
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 14px;
+}
+#tasks .task .content{
+    flex: 1 1 0%;
+}
+#tasks .task .content .text{
+    color: antiquewhite;
+    font: 16px;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#tasks .task .content .text:not(:read-only){
+    color:rgb(78, 9, 238)
+}
+
+#tasks .task .actions{
+    display: flex;
+     
+}
+
+#tasks .actions .edit{
+    background-image: linear-gradient(to right, rgb(162, 8, 240), rgb(78, 9, 238));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    display: flex;
+    margin: 0 0.8px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+ }
+#tasks .actions .edit:hover{
+    opacity:0.8
+}
+
+#tasks .actions .delete{
+    background-image: linear-gradient(to right, rgb(240, 8, 8), rgb(238, 9, 116));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    display: flex;
+    margin: 0 0.8px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+ }
+#tasks .actions .delete:hover{
+    opacity:0.8
+}
